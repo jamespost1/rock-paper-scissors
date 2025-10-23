@@ -10,5 +10,37 @@ function getComputerChoice(){
 }
 
 function getHumanChoice(){
-    prompt("Rock, Paper, Scissors says SHOOT! Input your move:")
+    let choice = prompt("Rock, Paper, Scissors says SHOOT! Input your move:");
+    while(choice.toLowerCase!="rock"||choice.toLowerCase!="paper"||choice.toLowerCase!="scissors"){
+        prompt("Please input a valid move: Rock | Paper | Scissors");
+    }
 }
+
+function playRound(humanChoice, computerChoice){
+    if(computerChoice.toLowerCase()===humanChoice.toLowerCase()){
+        console.log("Draw! No points rewarded");
+    } else if(computerChoice.toLowerCase()==="rock"&&humanChoice.toLowerCase()==="paper"){
+        console.log("Paper covers rock! +1 point to you");
+        humanScore++;
+    } else if(computerChoice.toLowerCase()==="rock"&&humanChoice.toLowerCase()==="scissors"){
+        console.log("Rock beats scissors! +1 point to the computer");
+        computerScore++;
+    } else if(computerChoice.toLowerCase()==="paper"&&humanChoice.toLowerCase()==="rock"){
+        console.log("Paper covers rock! +1 point to the computer");
+        computerScore++;
+    } else if(computerChoice.toLowerCase()==="paper"&&humanChoice.toLowerCase()==="scissors"){
+        console.log("Scissors cut paper! +1 point to you");
+        humanScore++;
+    } else if(computerChoice.toLowerCase()==="scissors"&&humanChoice.toLowerCase()==="rock"){
+        console.log("Rock beats scissors! +1 point to you");
+        humanScore++;
+    } else if(computerChoice.toLowerCase()==="scissors"&&humanChoice.toLowerCase()==="paper"){
+        console.log("Scissors cut paper! +1 point to the computer");
+        computerScore++;
+    }
+}
+
+let humanScore = 0;
+let computerScore = 0;
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
