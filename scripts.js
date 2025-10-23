@@ -40,7 +40,19 @@ function playRound(humanChoice, computerChoice){
     }
 }
 
-let humanScore = 0;
-let computerScore = 0;
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+function playGame(){
+    let humanScore = 0;
+    let computerScore = 0;
+    let humanSelection = getHumanChoice();
+    let computerSelection = getComputerChoice();
+    for(let i=0; i<5; i++){
+        playRound(humanSelection, computerSelection);
+        humanSelection = getHumanChoice();
+        computerSelection = getComputerChoice();
+    }
+    if(humanScore>computerScore){
+        console.log("You won in a best of 5!")
+    } else {
+        console.log("You lost in a best of 5.")
+    }
+}
