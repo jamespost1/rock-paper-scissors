@@ -1,98 +1,87 @@
-/* Base setup */
+/* Import a clean, interesting web font */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'JetBrains Mono', monospace;
+  background-color: #ffffff; /* white background */
+  color: #000000; /* black text */
   text-align: center;
-  background: linear-gradient(135deg, #ff4d6d, #1c1c1e);
-  color: #fff;
-  padding: 2rem;
-  min-height: 100vh;
+  padding: 3rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  min-height: 100vh;
 }
 
 /* Header */
 h1 {
-  font-size: 2.2rem;
-  letter-spacing: 2px;
+  font-size: 3rem;
   margin-bottom: 2rem;
-  text-shadow: 2px 2px #00000066;
+  letter-spacing: 2px;
 }
 
-/* Score */
+/* Scoreboard */
 #score {
   font-size: 1.8rem;
-  font-weight: bold;
-  background: rgba(255,255,255,0.1);
-  padding: 0.8rem 1.2rem;
-  border-radius: 15px;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  transition: transform 0.2s ease;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  border: 2px solid #000;
+  display: inline-block;
+  min-width: 250px;
 }
 
-#score:hover {
-  transform: scale(1.05);
-}
-
-/* Result message */
+/* Result text */
 #result {
   font-size: 1.3rem;
-  margin-top: 1rem;
   font-style: italic;
-  color: #fffb;
-  text-shadow: 1px 1px #00000077;
+  margin-top: 1rem;
+  min-height: 1.5em;
 }
 
-/* Game buttons */
+/* Buttons container */
 #game {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
   margin-bottom: 2rem;
 }
 
+/* Button styling */
 button {
   width: 80px;
   height: 80px;
-  border-radius: 50%;
-  font-size: 1.6rem;
+  border-radius: 50%; /* perfect circle */
   border: none;
+  background: none; /* invisible background */
+  font-size: 2.5rem; /* emoji size */
   cursor: pointer;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 button:hover {
-  transform: translateY(-5px) rotate(-5deg);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  transform: scale(1.3); /* enlarge slightly on hover */
 }
 
 button:active {
-  transform: translateY(0) rotate(0deg);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transform: scale(1.1); /* slightly smaller when pressed */
 }
 
 button:disabled {
-  background: #555;
-  color: #aaa;
   cursor: not-allowed;
-  box-shadow: none;
+  opacity: 0.3;
 }
 
-/* Optional: funky color variations per button */
-#rock {
-  background: linear-gradient(135deg, #ff416c, #ff4b2b);
-  color: #fff;
+/* Optional: small accent for emojis when hovering */
+#rock:hover {
+  transform: scale(1.3) rotate(-10deg);
 }
 
-#paper {
-  background: linear-gradient(135deg, #1c92d2, #f2fcfe);
-  color: #1c1c1e;
+#paper:hover {
+  transform: scale(1.3) rotate(5deg);
 }
 
-#scissors {
-  background: linear-gradient(135deg, #f953c6, #b91d73);
-  color: #fff;
+#scissors:hover {
+  transform: scale(1.3) rotate(10deg);
 }
