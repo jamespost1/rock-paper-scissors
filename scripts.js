@@ -2,7 +2,7 @@ let humanScore = 0;
 let computerScore = 0;
 
 function getComputerChoice(){
-    const val = Math.trunc((Math.random()*10)%3);
+    let val = Math.trunc((Math.random()*10)%3);
     if(val===0){
         return "Rock";
     } else if (val===1){
@@ -14,6 +14,7 @@ function getComputerChoice(){
 
 
 function playRound(humanChoice, computerChoice){
+    computerChoice = computerChoice.toLowerCase();
     const resultMsg = document.querySelector("#result");
     const score = document.querySelector("#score");
 
