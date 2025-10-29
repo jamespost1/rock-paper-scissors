@@ -2,7 +2,7 @@ let humanScore = 0;
 let computerScore = 0;
 
 function getComputerChoice(){
-    let val = Math.trunc((Math.random()*10)%3);
+    const val = Math.trunc((Math.random()*10)%3);
     if(val===0){
         return "Rock";
     } else if (val===1){
@@ -12,22 +12,6 @@ function getComputerChoice(){
     }
 }
 
-function getHumanChoice(){
-    let choice = prompt("Rock, Paper, Scissors says SHOOT! Input your move:");
-    
-    if(choice===null){
-        console.log("Game canceled")
-    }
-    choice = choice.trim().toLowerCase();
-
-    while (choice !== "rock" && choice !== "paper" && choice !== "scissors"){
-        choice = prompt("Please input a valid move: Rock | Paper | Scissors");
-        if (choice === null) return null;
-        choice = choice.trim().toLowerCase();
-    }
-
-    return choice;
-}
 
 function playRound(humanChoice, computerChoice){
     if(computerChoice.toLowerCase()===humanChoice.toLowerCase()){
@@ -51,6 +35,14 @@ function playRound(humanChoice, computerChoice){
         console.log("Scissors cut paper! +1 point to the computer");
         computerScore++;
     }
+    const score = document.querySelector("#score");
+    score.textContent = `You: ${humanScore} Computer: ${computerScore}`;
+    
+    if(humanScore===5){
+        score.textContent = `You win! You: ${humanScore} Computer: ${computerScore}`;
+    } else if(computerScore===5){
+        score.textContent = `Computer wins! You: ${humanScore} Computer: ${computerScore}`;
+    }
 }
 
 const rock = document.querySelector("#rock");
@@ -70,4 +62,4 @@ scissors.addEventListener("click", () => {
 });
 
 const score = document.querySelector("#score");
-score.textContent = "You: " + humanScore + " Computer: " + computerScore;
+score.textContent = `You: ${humanScore} Computer: ${computerScore}`;
