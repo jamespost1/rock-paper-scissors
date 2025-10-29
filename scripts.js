@@ -14,29 +14,26 @@ function getComputerChoice(){
 
 
 function playRound(humanChoice, computerChoice){
-    if(computerChoice.toLowerCase()===humanChoice.toLowerCase()){
-        console.log("Draw! No points rewarded");
-    } else if(computerChoice.toLowerCase()==="rock"&&humanChoice.toLowerCase()==="paper"){
-        console.log("Paper covers rock! +1 point to you");
-        humanScore++;
-    } else if(computerChoice.toLowerCase()==="rock"&&humanChoice.toLowerCase()==="scissors"){
-        console.log("Rock beats scissors! +1 point to the computer");
-        computerScore++;
-    } else if(computerChoice.toLowerCase()==="paper"&&humanChoice.toLowerCase()==="rock"){
-        console.log("Paper covers rock! +1 point to the computer");
-        computerScore++;
-    } else if(computerChoice.toLowerCase()==="paper"&&humanChoice.toLowerCase()==="scissors"){
-        console.log("Scissors cut paper! +1 point to you");
-        humanScore++;
-    } else if(computerChoice.toLowerCase()==="scissors"&&humanChoice.toLowerCase()==="rock"){
-        console.log("Rock beats scissors! +1 point to you");
-        humanScore++;
-    } else if(computerChoice.toLowerCase()==="scissors"&&humanChoice.toLowerCase()==="paper"){
-        console.log("Scissors cut paper! +1 point to the computer");
-        computerScore++;
-    }
+    const resultMsg = document.querySelector("#result");
     const score = document.querySelector("#score");
-    score.textContent = `You: ${humanScore} Computer: ${computerScore}`;
+
+    if(computerChoice.toLowerCase()===humanChoice.toLowerCase()){
+        resultMsg.textContent="Draw! No points rewarded";
+    } else if (
+    (computerChoice==="rock"&&humanChoice==="paper") || 
+    (computerChoice==="paper"&&humanChoice==="scissors") || 
+    (computerChoice==="scissors"&&humanChoice==="rock")
+    ) {
+        humanScore++;
+        resultMsg.textContent=`You win this round! ${humanChoice} beats ${computerChoice}.`;
+    } else {
+        computerScore++;
+        resultMsg.textContent=`You lose this round! ${computerChoice} beats ${humanChoice}`;
+    }
+
+    score.textContent=`🧍 You: ${humanScore} | Computer: ${computerScore} 🤖`
+
+
     
     if(humanScore===5){
         score.textContent = `You win! You: ${humanScore} Computer: ${computerScore}`;
@@ -60,6 +57,3 @@ paper.addEventListener("click", () => {
 scissors.addEventListener("click", () => {
   playRound("scissors", getComputerChoice());
 });
-
-const score = document.querySelector("#score");
-score.textContent = `You: ${humanScore} Computer: ${computerScore}`;
