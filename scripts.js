@@ -54,21 +54,19 @@ function playRound(humanChoice, computerChoice){
 }
 
 const rock = document.querySelector("#rock");
-rock.addEventListener("click", () => {
-  let computerDecision = getComputerChoice();
-  playRound(rock,computerDecision);
-});
-
 const paper = document.querySelector("#paper");
-paper.addEventListener("click", () => {
-  let computerDecision = getComputerChoice();
-  playRound(paper,computerDecision);
+const scissors = document.querySelector("#scissors");
+
+rock.addEventListener("click", () => {
+  playRound("rock", getComputerChoice());
 });
 
-const scissors = document.querySelector("#scissors");
+paper.addEventListener("click", () => {
+  playRound("paper", getComputerChoice());
+});
+
 scissors.addEventListener("click", () => {
-  let computerDecision = getComputerChoice();
-  playRound(scissors,computerDecision);
+  playRound("scissors", getComputerChoice());
 });
 
 const score = document.querySelector("#score");
