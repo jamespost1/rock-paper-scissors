@@ -66,7 +66,7 @@ paper.addEventListener("click", () => {
 });
 
 const scissors = document.querySelector("#scissors");
-scissor.addEventListener("click", () => {
+scissors.addEventListener("click", () => {
   let computerDecision = getComputerChoice();
   playRound(scissors,computerDecision);
 });
