@@ -1,50 +1,98 @@
+/* Base setup */
 body {
-  font-family: "Segoe UI", sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-align: center;
-  background-color: #f3f4f6;
-  color: #333;
+  background: linear-gradient(135deg, #ff4d6d, #1c1c1e);
+  color: #fff;
   padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Header */
 h1 {
-  margin-bottom: 1rem;
-  color: #222;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px #00000066;
 }
 
+/* Score */
 #score {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
+  background: rgba(255,255,255,0.1);
+  padding: 0.8rem 1.2rem;
+  border-radius: 15px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
 }
 
+#score:hover {
+  transform: scale(1.05);
+}
+
+/* Result message */
+#result {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  font-style: italic;
+  color: #fffb;
+  text-shadow: 1px 1px #00000077;
+}
+
+/* Game buttons */
 #game {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 button {
-  font-size: 1.2rem;
-  padding: 0.8rem 1.2rem;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1.6rem;
   border: none;
-  border-radius: 10px;
-  background-color: #4f46e5;
-  color: white;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 button:hover {
-  background-color: #4338ca;
+  transform: translateY(-5px) rotate(-5deg);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+button:active {
+  transform: translateY(0) rotate(0deg);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 button:disabled {
-  background-color: #9ca3af;
+  background: #555;
+  color: #aaa;
   cursor: not-allowed;
+  box-shadow: none;
 }
 
-#result {
-  font-size: 1.3rem;
-  margin-top: 1rem;
+/* Optional: funky color variations per button */
+#rock {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: #fff;
+}
+
+#paper {
+  background: linear-gradient(135deg, #1c92d2, #f2fcfe);
+  color: #1c1c1e;
+}
+
+#scissors {
+  background: linear-gradient(135deg, #f953c6, #b91d73);
+  color: #fff;
 }
