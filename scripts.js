@@ -52,23 +52,3 @@ function playRound(humanChoice, computerChoice){
         computerScore++;
     }
 }
-
-function playGame(){
-    for(let i=0; i<5; i++){
-        const humanSelection = getHumanChoice();
-        if(humanSelection===null){
-            console.log("Game ended early");
-            return;
-        }
-        const computerSelection = getComputerChoice();
-        playRound(humanSelection, computerSelection);
-    }
-    if(humanScore>computerScore){
-        console.log("You won in a best of 5!")
-    } else {
-        console.log("You lost in a best of 5.")
-    }
-}
-
-
-playGame();
