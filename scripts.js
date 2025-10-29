@@ -18,7 +18,7 @@ function playRound(humanChoice, computerChoice){
     const score = document.querySelector("#score");
 
     if(computerChoice.toLowerCase()===humanChoice.toLowerCase()){
-        resultMsg.textContent="Draw! No points rewarded";
+        resultMsg.textContent=`Draw! You both chose ${computerChoice}`;
     } else if (
     (computerChoice==="rock"&&humanChoice==="paper") || 
     (computerChoice==="paper"&&humanChoice==="scissors") || 
@@ -32,16 +32,12 @@ function playRound(humanChoice, computerChoice){
     }
 
     score.textContent=`🧍 You: ${humanScore} | Computer: ${computerScore} 🤖`;
-
-
     
-    if(humanScore===5){
-        score.textContent = `You win! You: ${humanScore} Computer: ${computerScore}`;
-    } else if(computerScore===5){
-        score.textContent = `Computer wins! You: ${humanScore} Computer: ${computerScore}`;
+    if(humanScore===5||computerScore===5){
+        const winner = humanScore === 5 ? "You win this game! 🎉" : "Computer wins the game! 🤖"
+        resultMsg.textContent = winner;
     }
 }
-
 const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
 const scissors = document.querySelector("#scissors");
