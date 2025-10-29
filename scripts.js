@@ -31,7 +31,7 @@ function playRound(humanChoice, computerChoice){
         resultMsg.textContent=`You lose this round! ${computerChoice} beats ${humanChoice}`;
     }
 
-    score.textContent=`🧍 You: ${humanScore} | Computer: ${computerScore} 🤖`
+    score.textContent=`🧍 You: ${humanScore} | Computer: ${computerScore} 🤖`;
 
 
     
