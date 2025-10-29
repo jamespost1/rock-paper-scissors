@@ -1,66 +1,82 @@
-# Rock Paper Scissors – Browser UI Version
+# Rock, Paper, Scissors
 
-A simple **interactive Rock, Paper, Scissors** game built in **vanilla JavaScript** as part of [The Odin Project Foundations Course](https://www.theodinproject.com/paths/foundations/courses/foundations).  
-This version replaces the command-line interface with a **clickable UI**, showing round results, live score, and fun emoji-based buttons.  
+A sleek, minimalist implementation of **Rock, Paper, Scissors** built in **vanilla JavaScript**, featuring a modern black-and-white UI with clean circular buttons.
+
+This project was built as part of [The Odin Project Foundations Course](https://www.theodinproject.com/paths/foundations/courses/foundations).
 
 ---
 
 ## Overview
 
-The project lets a player compete against a computer opponent in the browser.  
+This is a **browser-based game** where you play Rock, Paper, Scissors against a computer opponent.  
 
-- Players click one of the three emoji buttons (✊ Rock, ✋ Paper, ✌️ Scissors).  
-- The computer makes a random choice each round.  
-- Round results are displayed below the buttons.  
-- The scoreboard updates in real time.  
-- The first to **5 points wins the match**, with a celebratory message displayed.
+- Interactive **clickable buttons** for player choices.  
+- Live **scoreboard** tracking your wins and the computer’s.  
+- **Round result messages** displayed dynamically.  
+- First to **5 points wins the game**.  
 
-This version demonstrates **DOM manipulation, event handling, and live UI updates** in addition to core JavaScript game logic.
+This version emphasizes **clean, readable JavaScript logic** and a **minimalist professional UI**.
 
 ---
 
 ## Features
 
-- **Interactive UI** with buttons for Rock, Paper, Scissors.  
-- **Live scoreboard** showing 🧍You and 🤖Computer scores.  
-- **Round feedback** displayed dynamically below buttons.  
-- **First-to-5 match** with a winner message.  
-- **Simple, clean, and artful styling** with gradient buttons and subtle hover effects.  
-- **Responsive and visually engaging**, uses emojis to enhance clarity and fun.  
+- Player vs Computer rounds with randomized computer choice.  
+- Simple and intuitive **circular buttons**.  
+- Real-time scoreboard updates.  
+- Clear, concise round result messages.  
+- Fully responsive and lightweight design — no frameworks required.  
 
 ---
 
 ## Technologies Used
 
-- **HTML5** — structure of buttons, scoreboard, and result area.  
-- **CSS3** — styling for gradients, hover effects, and rounded buttons.  
-- **JavaScript (ES6)** — game logic, DOM manipulation, event listeners.  
+- **HTML5** — page structure and layout  
+- **CSS3** — minimalist, modern styling with hover animations  
+- **JavaScript (ES6)** — game logic, score tracking, and DOM manipulation  
+
+---
+
+## Styling
+
+- Black-and-white minimalist theme.  
+- Circular buttons with subtle hover and click animations.  
+- Monospace “JetBrains Mono” font for a modern look.  
+- Clean scoreboard panel with rounded edges for a professional appearance.  
+
+---
+
+## How to Play
+
+1. Open the `index.html` file in your browser.  
+2. Click on one of the buttons for Rock, Paper, or Scissors.  
+3. The computer randomly selects a choice.  
+4. Round results appear below the buttons and the scoreboard updates.  
+5. First to 5 points wins the game.  
 
 ---
 
 ## What I Learned
 
-- How to **manipulate the DOM** to update content dynamically.  
-- Attaching **event listeners** to buttons for interactive behavior.  
-- Using **CSS gradients, rounded buttons, and hover effects** for visual appeal.  
-- Managing **game state** with variables for score tracking.  
-- Writing **clean, maintainable JavaScript** with functions for readability.  
+- DOM manipulation and event handling in JavaScript.  
+- Using CSS for interactive hover and active states without JavaScript.  
+- Designing a **clean, minimalist UI** with subtle animations.  
+- Organizing JavaScript logic in a readable and reusable way.  
 
 ---
 
 ## Future Improvements
 
-- Add a **“Play Again”** button to reset scores without refreshing.  
-- Introduce **animations or sound effects** for wins/losses.  
-- Track **session statistics** (e.g., win/loss ratio).  
-- Make the game **fully responsive** and mobile-friendly.  
-- Enhance **accessibility** (keyboard controls, focus styles).  
+- Add a **reset/restart button**.  
+- Add subtle **sound effects** for rounds.  
+- Include a **history log** of rounds played.  
+- Make it **keyboard-accessible** for accessibility.  
 
 ---
 
 ## License
 
-This project is open source under the [MIT License](LICENSE).  
+This project is open source under the **MIT License**.  
 
 ---
 
