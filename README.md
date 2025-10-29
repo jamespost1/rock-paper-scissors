@@ -1,80 +1,66 @@
-# Rock Paper Scissors
+# Rock Paper Scissors – Browser UI Version
 
-A simple command-line implementation of Rock, Paper, Scissors built in **vanilla JavaScript** as part of [The Odin Project Foundations Course](https://www.theodinproject.com/paths/foundations/courses/foundations).  
-This project demonstrates core JavaScript logic, functions, conditionals, and randomization without any external libraries.
+A simple **interactive Rock, Paper, Scissors** game built in **vanilla JavaScript** as part of [The Odin Project Foundations Course](https://www.theodinproject.com/paths/foundations/courses/foundations).  
+This version replaces the command-line interface with a **clickable UI**, showing round results, live score, and fun emoji-based buttons.  
 
 ---
 
 ## Overview
 
-The goal of this phase was to build the complete game logic for Rock Paper Scissors that runs in the browser console.  
-It allows the player to play multiple rounds against a computer opponent that makes random choices. The winner of each round and the overall score are displayed in the console.
+The project lets a player compete against a computer opponent in the browser.  
 
-This version focuses on:
-- Clean, readable JavaScript.
-- Proper function structure and return values.
-- Handling user input via `prompt()` (or pre-set test cases).
-- Score tracking and conditional logic for determining outcomes.
+- Players click one of the three emoji buttons (✊ Rock, ✋ Paper, ✌️ Scissors).  
+- The computer makes a random choice each round.  
+- Round results are displayed below the buttons.  
+- The scoreboard updates in real time.  
+- The first to **5 points wins the match**, with a celebratory message displayed.
+
+This version demonstrates **DOM manipulation, event handling, and live UI updates** in addition to core JavaScript game logic.
 
 ---
 
 ## Features
 
-- Player vs Computer rounds.
-- Randomized computer choice each round.
-- Input validation (ignores invalid entries).
-- Score tracking over five rounds (configurable).
-- Displays round results and final winner in the console.
+- **Interactive UI** with buttons for Rock, Paper, Scissors.  
+- **Live scoreboard** showing 🧍You and 🤖Computer scores.  
+- **Round feedback** displayed dynamically below buttons.  
+- **First-to-5 match** with a winner message.  
+- **Simple, clean, and artful styling** with gradient buttons and subtle hover effects.  
+- **Responsive and visually engaging**, uses emojis to enhance clarity and fun.  
 
 ---
 
 ## Technologies Used
 
-- **HTML5** (minimal placeholder file)  
-- **JavaScript (ES6)** — logic and interaction  
-- **No CSS or UI** (console-based version)
+- **HTML5** — structure of buttons, scoreboard, and result area.  
+- **CSS3** — styling for gradients, hover effects, and rounded buttons.  
+- **JavaScript (ES6)** — game logic, DOM manipulation, event listeners.  
 
 ---
 
 ## What I Learned
 
-- How to structure functions for clarity and reusability.
-- Importance of handling user input and validation.
-- Using conditionals and random number generation for game logic.
-- Basic debugging and testing in the browser console.
-- Breaking a problem into smaller, testable parts.
-
----
-
-## Planned Phase 2: GUI Version
-
-**Next step** will be upgrading this console game to a fully interactive GUI version using DOM manipulation.
-
-Planned updates:
-- Replace console input/output with clickable buttons.
-- Display player and computer choices visually.
-- Show ongoing score and round results on-screen.
-- Add basic styling with CSS (responsive layout).
-- Optional enhancements:
-  - Animation for wins/losses.
-  - Restart/reset button.
-  - Persistent score tracking with `localStorage`.
+- How to **manipulate the DOM** to update content dynamically.  
+- Attaching **event listeners** to buttons for interactive behavior.  
+- Using **CSS gradients, rounded buttons, and hover effects** for visual appeal.  
+- Managing **game state** with variables for score tracking.  
+- Writing **clean, maintainable JavaScript** with functions for readability.  
 
 ---
 
 ## Future Improvements
 
-After the GUI phase:
-- Add sound effects and transitions.
-- Create a “best of” match mode.
-- Track session stats and display summaries.
-- Improve accessibility (keyboard controls, focus states).
+- Add a **“Play Again”** button to reset scores without refreshing.  
+- Introduce **animations or sound effects** for wins/losses.  
+- Track **session statistics** (e.g., win/loss ratio).  
+- Make the game **fully responsive** and mobile-friendly.  
+- Enhance **accessibility** (keyboard controls, focus styles).  
 
 ---
 
 ## License
 
-This project is open source under the [MIT License](LICENSE).
+This project is open source under the [MIT License](LICENSE).  
 
 ---
 
@@ -83,5 +69,3 @@ This project is open source under the [MIT License](LICENSE).
 **James Post**  
 GitHub: [jamespost1](https://github.com/jamespost1)  
 Built as part of [The Odin Project](https://www.theodinproject.com/).
-
----
