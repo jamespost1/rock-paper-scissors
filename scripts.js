@@ -52,3 +52,24 @@ function playRound(humanChoice, computerChoice){
         computerScore++;
     }
 }
+
+const rock = document.querySelector("#rock");
+rock.addEventListener("click", () => {
+  let computerDecision = getComputerChoice();
+  playRound(rock,computerDecision);
+});
+
+const paper = document.querySelector("#paper");
+paper.addEventListener("click", () => {
+  let computerDecision = getComputerChoice();
+  playRound(paper,computerDecision);
+});
+
+const scissors = document.querySelector("#scissors");
+scissor.addEventListener("click", () => {
+  let computerDecision = getComputerChoice();
+  playRound(scissors,computerDecision);
+});
+
+const score = document.querySelector("#score");
+score.textContent = "You: " + humanScore + " Computer: " + computerScore;
